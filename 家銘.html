@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<div id="chart_div"></div>
+<script>
+google.charts.load('current', {packages: ['corechart', 'bar']});
+google.charts.setOnLoadCallback(drawChart);
+function drawChart(){var data = new google.visualization.arrayToDataTable([
+['Time', 'Value'],
+['虛空', 29.22], ['弗雷爾卓德', 22.94], ['蘇瑞瑪', 21.7], ['比爾吉沃特', 33.5], ['愛歐尼雅', 27.83],
+['蒂瑪西雅', 10.6], ['闇影島', 17.45], ['皮爾托福', 13.93], ['約德爾', 31.74], ['諾克薩斯', 8.02],
+]);var options = {
+title: 'ＴＦＴ不負責任勝率表',
+hAxis: { title: '羈絆'},
+vAxis: {title: '勝率（％）'}
+};var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
+chart.draw(data, options);
+}
+</script>
